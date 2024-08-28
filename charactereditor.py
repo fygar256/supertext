@@ -78,8 +78,8 @@ def eventloop(F,screen):
                 elif k=='l':
                     F=load_char(screen)
                 elif k=='w':
-                    print(f"file chars.txt wrote.")
-                    print(np.savetxt("chars.txt", chars, "%d"))
+                    print(f"file {charsfn} wrote.")
+                    print(np.savetxt(charsfn, chars, "%d"))
                 elif k=='s':
                     save_char(F)
                 elif k=='c':
@@ -99,9 +99,9 @@ def main():
     screen = pygame.display.set_mode((scale*width,scale*height))    # 画面を作成
     pygame.display.set_caption("pattern editor")    # タイトルを作成
     draw_grid(screen)
-    fn="chars.txt"
-    if os.path.exists(fn):
-         chars = np.loadtxt(fn)
+    charsfn=sys.argv[1] if len(sys.argv)>=2 else "chars.txt"
+    if os.path.exists(charsfn):
+         chars = np.loadtxt(charsfn)
     F=clear()
     put(F,screen)
     eventloop(F,screen)
