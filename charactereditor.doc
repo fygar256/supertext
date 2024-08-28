@@ -2,7 +2,7 @@ Supertext Character Editor 'charactereditor.py'
 
 Supertextのキャラクタファイル、chars.txtを編集します。
 一つのキャラクタは8x8ドットからなります。
-charactereditor.pyはカレントディレクトリのchars.txtを扱います。
+charactereditor.pyは第一引数に与えられたファイルをchars.txtとして扱います。
 
 lで、キャラクタバッファから画面にキャラクタパターンをロードします。
 sで、画面のキャラクタパターンをキャラクタバッファにセーブします。
