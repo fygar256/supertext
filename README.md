@@ -5,7 +5,7 @@ supertext.pyは、昔の40x25ディスプレイのパソコンのキャラクタ
 cursesでは、当時のグラフィックキャラクタを再現できないため、キャラクタエディタと共に作りました。
 
 supertextは、カレントディレクトリからchars.txtというキャラクタパターンデータを読み込みます。chars.txtのある場所は、プログラム内の、path_to_charsという変数を変えることによって変更することができます。最初は、/home/gar/lib/chars.txtになっていますが、使用者個人の環境に合せ、任意のパスに変更してください。
-$ ./supertext.pyで、画面上に使えるキャラクタコードテーブルを表示します。キャラクタは0x00~0xffまでの256種類あり、charactereditor.pyで編集できます。charactereditor.pyはカレントディレクトリのchars.txtを扱います。
+$ ./supertext.pyで、画面上に使えるキャラクタコードテーブルを表示します。キャラクタは0x00~0xffまでの256種類あり、charactereditor.pyで編集できます。
 
 メソッド：
 
