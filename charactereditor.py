@@ -13,6 +13,7 @@ scale=24
 height=8
 width=8
 chars=[[0 for i in range(8*8)] for k in range(256)]
+charsfn=""
 
 def draw_grid(screen):
   screen.fill((0,0,0))
@@ -94,7 +95,7 @@ def eventloop(F,screen):
         pygame.display.update()
 
 def main():
-    global chars
+    global chars,charsfn
     pygame.init()    # Pygameを初期化
     screen = pygame.display.set_mode((scale*width,scale*height))    # 画面を作成
     pygame.display.set_caption("pattern editor")    # タイトルを作成
